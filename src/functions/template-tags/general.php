@@ -208,9 +208,14 @@ if ( class_exists( 'Tribe__Events__Main' ) ) {
 	}
 
 	/**
-	 * Get Event
+	 * Get Events
 	 *
-	 * Queries the events using WordPress get_posts() by setting the post type and sorting by event date.
+	 * Queries the events in the database using WP_Query managed by tribe_events() using the Object-Relational Mapping
+	 *
+	 * @since  3.0
+	 *
+	 * @see  Tribe__Events__Query::getEvents
+	 * @see  tribe_events()
 	 *
 	 * @category Events
 	 *
@@ -239,7 +244,7 @@ if ( class_exists( 'Tribe__Events__Main' ) ) {
 	 * @return array|WP_Query A list of event posts matching the query arguments or a WP_Query instance
 	 *                        if the `$full` argument is set to `true`.
 	 */
-	function tribe_get_events( $args = array(), $full = false ) {
+	function tribe_get_events( $args = [], $full = false ) {
 		if ( empty ( $args['eventDisplay'] ) ) {
 			$args['eventDisplay'] = 'custom';
 		}

@@ -1200,13 +1200,13 @@ if ( ! class_exists( 'Tribe__Events__Query' ) ) {
 		 *
 		 * @return array|WP_Query
 		 */
-		public static function getEvents( $args = array(), $full = false ) {
-			$defaults = array(
+		public static function getEvents( $args = [], $full = false ) {
+			$defaults = [
 				'orderby'              => 'event_date',
 				'order'                => 'ASC',
 				'posts_per_page'       => tribe_get_option( 'posts_per_page', tribe_get_option( 'postsPerPage', get_option( 'posts_per_page', 10 ) ) ),
 				'tribe_render_context' => 'default',
-			);
+			];
 
 			$args = wp_parse_args( $args, $defaults );
 			$event_display = tribe_get_request_var(
