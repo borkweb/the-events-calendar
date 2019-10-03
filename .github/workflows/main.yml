@@ -18,7 +18,7 @@ jobs:
       uses: shivammathur/setup-php@master
       with:
         php-version: 7.2
-        extension-csv: php72-cli, php72-curl, php-gd
+        extension-csv: cli, curl, gd
 
     # https://github.com/marketplace/actions/composer-php
     - name: Composer install
