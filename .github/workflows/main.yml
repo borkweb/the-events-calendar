@@ -20,6 +20,9 @@ jobs:
         php-version: 7.2
         extension-csv: cli, curl, gd
 
+    - name: Check PHP Extensions
+      run: php -m
+
     # https://github.com/marketplace/actions/composer-php
     - name: Composer install
       uses: nick-zh/composer-php@master
