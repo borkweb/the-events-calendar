@@ -5,6 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
+    # https://github.com/marketplace/actions/setup-php-action
+    - name: Installing PHP
+      uses: shivammathur/setup-php@master
+      with:
+        php-version: 7.2
+        extension-csv: php7.2-cli, php7.2-curl, php-xml
+
+    # https://github.com/marketplace/actions/composer-php
     - name: Composer install
       uses: nick-zh/composer-php@master
       with:
