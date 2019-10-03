@@ -67,7 +67,7 @@ if ( tribe_is_not_min_php_version() ) {
 /**
  * Loads the action plugin
  */
-require_once dirname( TRIBE_EVENTS_FILE ) . '/src/Tribe/Main.php';
+require_once dirname(TRIBE_EVENTS_FILE) . '/src/Tribe/Main.php';
 
 Tribe__Events__Main::instance();
 
