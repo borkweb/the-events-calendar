@@ -23,8 +23,8 @@ jobs:
     - name: Check PHP Extensions
       run: php -m
 
-    - name: Check Composer Version
-      run: composer -V
+    - name: Composer install
+      run: composer install -o
 
     # https://github.com/marketplace/actions/composer-php
     #- name: Composer install
