@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - uses: borkweb/action-tribe-phpcs@master
 
     # https://github.com/marketplace/actions/setup-php-action
     - name: Installing PHP
@@ -20,15 +21,5 @@ jobs:
         php-version: 7.2
         extension-csv: cli, curl, gd
 
-    - name: Check PHP Extensions
-      run: php -m
-
-    - name: Composer install
+    - name: Composer Install
       run: composer install -o
-
-    # https://github.com/marketplace/actions/composer-php
-    #- name: Composer install
-    #  uses: nick-zh/composer-php@master
-    #  with:
-    #    action: 'update'
-    #    options: '-o'
