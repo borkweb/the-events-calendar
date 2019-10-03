@@ -1,0 +1,12 @@
+name: Code Review
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Composer install
+      uses: nick-zh/composer-php@master
+      with:
+        action: 'update'
+        options: '-o'
