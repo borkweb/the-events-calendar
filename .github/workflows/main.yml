@@ -15,13 +15,3 @@ jobs:
     - uses: borkweb/action-tribe-phpcs@master
       with:
         github-bot-token: ${{ secrets.GH_BOT_TOKEN }}
-
-    # https://github.com/marketplace/actions/setup-php-action
-    #- name: Installing PHP
-    #  uses: shivammathur/setup-php@master
-    #  with:
-    #    php-version: 7.2
-    #    extension-csv: cli, curl, gd
-    #
-    #- name: Composer Install
-    #  run: composer install -o
