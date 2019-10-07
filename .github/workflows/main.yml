@@ -8,7 +8,7 @@ on:
       - '.editorconfig'
       - 'CODEOWNERS'
 jobs:
-  build:
+  phpcs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
