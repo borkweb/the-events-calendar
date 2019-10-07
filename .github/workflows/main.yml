@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: borkweb/action-tribe-phpcs@master
-      env:
-        GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+      with:
+        github-bot-token: ${{ secrets.GH_BOT_TOKEN }}
 
     # https://github.com/marketplace/actions/setup-php-action
     #- name: Installing PHP
